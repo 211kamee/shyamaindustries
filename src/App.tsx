@@ -27,7 +27,7 @@ export default function App() {
 	];
 
 	return (
-		<div className="w-full min-h-[100lvh] flex flex-col justify-between items-center">
+		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center">
 			<header className="w-full h-16 p-4 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] md:py-2 z-10">
 				<img src="/logo.png" alt="Logo" className="h-20" />
 				<NavList className="hidden max-w-max md:flex">
@@ -40,7 +40,7 @@ export default function App() {
 				<span className="cursor-pointer md:hidden" onClick={hamburgerHandler}>
 					<AlignJustify></AlignJustify>
 					<NavList
-						className="hidden flex-col absolute w-[100vw] h-[calc(100lvh-4rem)] top-[100%] right-0 bg-background"
+						className="hidden flex-col absolute w-full h-[calc(100svh-4rem)] top-[100%] right-0 bg-background"
 						id="hamburger"
 					>
 						<NavItems>
