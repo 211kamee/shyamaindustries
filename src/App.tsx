@@ -28,9 +28,9 @@ export default function App() {
 
 	return (
 		<div className="w-full min-h-[100lvh] flex flex-col justify-between items-center">
-			<header className="w-full h-16 p-4 relative flex justify-between items-center break-all md:px-[12vw] md:py-2 font-bold">
-				<img src="/logo.png" alt="Logo" className="h-22" />
-				<NavList className="max-w-max not-md:hidden">
+			<header className="w-full h-16 p-4 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] md:py-2 z-10">
+				<img src="/logo.png" alt="Logo" className="h-20" />
+				<NavList className="hidden max-w-max md:flex">
 					{navs.map((item, index) => (
 						<NavItems key={index}>
 							<a href={item.path}>{item.name}</a>
@@ -40,7 +40,7 @@ export default function App() {
 				<span className="cursor-pointer md:hidden" onClick={hamburgerHandler}>
 					<AlignJustify></AlignJustify>
 					<NavList
-						className="flex-col absolute w-[0vw] h-[calc(100lvh-3.7rem)] top-[105%] right-0 bg-background transition-all"
+						className="hidden flex-col absolute w-[100vw] h-[calc(100lvh-4rem)] top-[100%] right-0 bg-background"
 						id="hamburger"
 					>
 						<NavItems>
@@ -61,10 +61,12 @@ export default function App() {
 					</NavList>
 				</span>
 			</header>
-			<main className="grow-1 w-full">
-				<section className="flex justify-center items-center gap-4 p-16">
-					<span className="flex flex-col justify-between gap-6 font-medium w-[30rem] h-[30rem] px-4">
-						<h2 className="text-7xl font-medium">
+			<main className="grow-1 w-full relative">
+				<section className="flex flex-col justify-center items-center gap-4 p-16 md:flex-row-reverse">
+					<div className="bg-[url('/hero.jpg')] bg-cover w-full md:w-[40rem] h-[30rem] absolute top-1 z-[-10] not-md:opacity-50 md:static" />
+
+					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-zinc-50">
+						<h2 className="md:text-7xl text-5xl font-medium">
 							Saving thousands of{" "}
 							<span className="underline decoration-amber-600">lives</span>{" "}
 							daily
@@ -77,8 +79,6 @@ export default function App() {
 							Products <ArrowRight />
 						</Button>
 					</span>
-
-					<div className="bg-[url('/hero.jpg')] bg-cover w-[40rem] h-[30rem]"></div>
 				</section>
 			</main>
 			<footer className="bg-shade w-full border-b-2 md:px-[12vw] text-center">
@@ -97,9 +97,9 @@ export default function App() {
 
 const hamburgerHandler = () => {
 	const hamburger = document.querySelector("#hamburger") as HTMLElement;
-	if (hamburger.style.width === "") {
-		hamburger.style.width = "100vw";
+	if (hamburger.style.display === "") {
+		hamburger.style.display = "flex";
 	} else {
-		hamburger.style.width = "";
+		hamburger.style.display = "";
 	}
 };
