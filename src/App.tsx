@@ -1,8 +1,16 @@
 import { AlignJustify, ArrowRight } from "lucide-react";
 import { NavList, NavItems } from "@/components/NavHelper";
 import { Button } from "./components/ui/button";
+import { ProductCard } from "./components/ProductCard";
 
 export default function App() {
+	const products = [
+		{
+			imagePath: `braided.png`,
+			heading: `Braided Rope`,
+			description: `Some lorem description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis ipsum eligendi minus nam veniam dicta ea voluptate! Omnis, fuga error modi animi, veniam atque mollitia, reprehenderit praesentium explicabo perspiciatis cumque recusandae!.`,
+		},
+	];
 	const navs = [
 		{
 			name: "Home",
@@ -27,8 +35,8 @@ export default function App() {
 	];
 
 	return (
-		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center">
-			<header className="w-full h-16 p-4 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] md:py-2 z-10">
+		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center selection:bg-foreground selection:text-background">
+			<header className="w-full h-16 p-4 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] md:py-2 z-10 bg-background">
 				<img src="/logo.png" alt="Logo" className="h-20" />
 				<NavList className="hidden max-w-max md:flex">
 					{navs.map((item, index) => (
@@ -79,6 +87,17 @@ export default function App() {
 							Products <ArrowRight />
 						</Button>
 					</span>
+				</section>
+				<section
+					className={`flex justify-center items-center w-full md:p-8 shadow flex-wrap gap-4`}
+				>
+					{products.map((item) => (
+						<ProductCard
+							imagePath={item.imagePath}
+							description={item.description}
+							heading={item.heading}
+						/>
+					))}
 				</section>
 			</main>
 			<footer className="bg-shade w-full border-b-2 md:px-[12vw] text-center">
