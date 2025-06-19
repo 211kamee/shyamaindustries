@@ -123,5 +123,8 @@
 
 * {
 	box-sizing: border-box;
-	scroll-behavior: smooth;
+}
+
+html {
+	scroll-padding-top: 4rem;
 }

@@ -35,7 +35,7 @@ export default function App() {
 		},
 		{
 			imagePath: "Fall_Arrestor.png",
-			heading: "",
+			heading: "Fall Arrestor",
 			description:
 				"Our safety Fall Arrestor automatically engage to halt falls smoothly and reliably, giving you unwavering protection whenever you need it.",
 		},
@@ -56,6 +56,18 @@ export default function App() {
 			heading: "Rope Protector",
 			description:
 				"Our Rope Protector shield your line from abrasion and wear, extending rope life and ensuring dependable performance every time.",
+		},
+		{
+			imagePath: "Carabiner.png",
+			heading: "Carabiner",
+			description:
+				"Our Carabiners features a dependable and strong auto-locking gate for consistent, everyday safety.",
+		},
+		{
+			imagePath: "Bag.png",
+			heading: "Bag",
+			description:
+				"Our Bag is Strong, Durable and Dependable, can easily hold all the essential safety tools.",
 		},
 		// { imagePath: "", heading: "", description: "" },
 	];
@@ -118,19 +130,19 @@ export default function App() {
 						id="hamburger"
 					>
 						<NavItems>
-							<a href="#">Home</a>
+							<a href="#hero">Home</a>
 						</NavItems>
 						<NavItems>
-							<a href="#">About us</a>
+							<a href="#about">About us</a>
 						</NavItems>
 						<NavItems>
-							<a href="#">Products</a>
+							<a href="#products">Products</a>
 						</NavItems>
 						<NavItems>
-							<a href="#">Industries Served</a>
+							<a href="#targeting">Industries Served</a>
 						</NavItems>
 						<NavItems>
-							<a href="#">Contact us</a>
+							<a href="#contact">Contact us</a>
 						</NavItems>
 					</NavList>
 				</span>
@@ -138,16 +150,15 @@ export default function App() {
 			<main className="grow-1 w-full relative">
 				{/* Hero */}
 				<section
-					className="flex flex-col justify-center items-center gap-4 p-16 md:flex-row-reverse"
+					className="flex flex-col justify-center items-center relative gap-4 not-md:my-8 p-16 md:flex-row-reverse min-h-[30rem]"
 					id="hero"
 				>
-					<div className="bg-[url('/hero.jpg')] bg-center bg-cover w-full md:w-[40rem] h-[30rem] absolute top-1 z-[-10] not-md:opacity-50 md:static" />
+					<div className="bg-[url('/hero.jpg')] bg-center bg-cover bg-no-repeat w-full md:w-[40rem] h-[30rem] absolute z-[-10] not-md:opacity-50 md:static" />
 
 					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-background">
 						<h2 className="md:text-7xl text-5xl font-medium">
 							Saving thousands of{" "}
-							<span className="underline decoration-amber-600">lives</span>{" "}
-							daily
+							<span className="underline decoration-chart-1">lives</span> daily
 						</h2>
 						<p className="">
 							Shyama Industries is a leading Fall Protection solutions brand.
@@ -160,50 +171,59 @@ export default function App() {
 				</section>
 				{/* Products */}
 				<section
-					className={`flex flex-col justify-center items-center w-full md:p-8 shadow flex-wrap gap-4`}
+					className={`flex flex-col justify-center items-center w-full md:p-8 gap-4`}
 					id="products"
 				>
-					Our Products
-					{products.map((item, index) => (
-						<ProductCard
-							imagePath={item.imagePath}
-							description={item.description}
-							heading={item.heading}
-							key={index}
-						/>
-					))}
+					<h2 className="text-4xl font-medium underline w-full decoration-chart-1 md:text-center p-8">
+						PRODUCTS
+					</h2>
+					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl">
+						{products.map((item, index) => (
+							<ProductCard
+								imagePath={item.imagePath}
+								description={item.description}
+								heading={item.heading}
+								key={index}
+							/>
+						))}
+					</div>
 				</section>
 				{/* Industries Served */}
 				<section
-					className={`flex justify-center items-center w-full md:p-8 shadow flex-wrap gap-4`}
+					className={`flex flex-col justify-center items-center w-full md:p-8 gap-4`}
 					id="targeting"
 				>
-					<ImagedAccordion
-						imagePath={targeting[0].imagePath}
-						description={targeting[0].description}
-						heading={targeting[0].heading}
-						key={0}
-					/>
+					<h2 className="text-4xl font-medium underline w-full decoration-chart-1 md:text-center p-8">
+						INDUSTRIES SERVED
+					</h2>
+					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl">
+						<ImagedAccordion
+							imagePath={targeting[0].imagePath}
+							description={targeting[0].description}
+							heading={targeting[0].heading}
+							key={0}
+						/>
+					</div>
 				</section>
 				{/* Contact Us */}
 				<section
-					className="flex justify-center items-center w-full"
+					className="flex justify-center items-center w-full bg-border"
 					id="contact"
 				>
-					<div className="w-full p-12 bg-border flex gap-6 justify-center">
+					<div className="w-full p-12 flex gap-6 justify-center not-md:flex-col">
 						<img
 							src="hello.svg"
-							className="max-h-96 w-1/2 object-contain object-right"
+							className="max-h-96 md:w-1/2 object-contain object-right"
 						/>
-						<div className="flex flex-col w-1/2 justify-center p-4 gap-8">
+						<div className="flex flex-col md:w-1/2 justify-center md:p-4 gap-8">
 							<span>We look forward to hearing from you!</span>
 							<h2 className="text-2xl font-bold">Contact us</h2>
 							<p className="max-w-96">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-								reprehenderit nam architecto ipsa molestiae? Suscipit.
+								Feel free to reach us out for any general and sales inquiry.
 							</p>
 							<a href="#">
-								<MapPin className="inline mx-2" /> Address
+								<MapPin className="inline mx-2" /> Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Omnis, officiis.
 							</a>
 							<a href="mailto:">
 								<Mail className="inline mx-2" /> mail@email.com
