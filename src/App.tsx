@@ -2,52 +2,117 @@ import { AlignJustify, ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 import { NavList, NavItems } from "@/components/NavHelper";
 import { Button } from "./components/ui/button";
 import { ProductCard } from "./components/ProductCard";
-import ImagedAccordion from "./components/ImagedAccordion";
+import { ImagedAccordion } from "./components/ImagedAccordion";
 
 export default function App() {
+	const targeting = [
+		{
+			imagePath: "Mountain_Climbing.jpg",
+			heading: "Mountain Climbing",
+			description:
+				"Some lorem description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis ipsum eligendi minus nam veniam dicta ea voluptate! Omnis, fuga error modi animi, veniam atque mollitia, reprehenderit praesentium explicabo perspiciatis cumque recusandae!.",
+		},
+		// { imagePath: "", heading: "", description: "" },
+	];
+
 	const products = [
 		{
-			imagePath: `braided.png`,
+			imagePath: `Braided_Rope.png`,
 			heading: `Braided Rope`,
-			description: `Some lorem description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis ipsum eligendi minus nam veniam dicta ea voluptate! Omnis, fuga error modi animi, veniam atque mollitia, reprehenderit praesentium explicabo perspiciatis cumque recusandae!.`,
+			description: `Our Braided Rope is   Strong and Durable, perfect to be used for safety purposes. It is made with high-quality materials, ensuring reliability and safety of the user.`,
 		},
+		{
+			imagePath: "Twisted_Rope.png",
+			heading: "Twisted Rope",
+			description:
+				"Our Twisted Rope is   Strong and Durable, perfect to be used for safety purposes. It is made with high-quality materials, ensuring reliability and safety of the user.",
+		},
+		{
+			imagePath: "Full_Body_Harness.png",
+			heading: "Full Body Harness",
+			description:
+				"Our Full Body Harness is designed for Comfort, and it is perfect to be used for all safety purposes, maintaining comfort on long sessions.",
+		},
+		{
+			imagePath: "Fall_Arrestor.png",
+			heading: "",
+			description:
+				"Our safety Fall Arrestor automatically engage to halt falls smoothly and reliably, giving you unwavering protection whenever you need it.",
+		},
+		{
+			imagePath: "Grip_Descender.png",
+			heading: "Grip Descender",
+			description:
+				"Our intuitive Grip Descender delivers smooth, controlled lowering with consistent, fail-safe braking, so you can descend confidently, every time.",
+		},
+		{
+			imagePath: "Rock_Chair_Seat.png",
+			heading: "Rock Chair Seat",
+			description:
+				"Our safety Rock Chair Seat deliver ergonomic support and steadfast stability, keeping you secure and comfortable during every height operation.",
+		},
+		{
+			imagePath: "Rope_Protector.png",
+			heading: "Rope Protector",
+			description:
+				"Our Rope Protector shield your line from abrasion and wear, extending rope life and ensuring dependable performance every time.",
+		},
+		// { imagePath: "", heading: "", description: "" },
 	];
-	const navs = [
-		{
-			name: "Home",
-			path: "#",
-		},
-		{
-			name: "About us",
-			path: "#",
-		},
-		{
-			name: "Products",
-			path: "#",
-		},
-		{
-			name: "Industries Served",
-			path: "#",
-		},
-		{
-			name: "Contact us",
-			path: "#",
-		},
-	];
+
+	// {
+	// 	const navs = [
+	// 		{
+	// 			name: "Home",
+	// 			path: "#",
+	// 		},
+	// 		{
+	// 			name: "About us",
+	// 			path: "#",
+	// 		},
+	// 		{
+	// 			name: "Products",
+	// 			path: "#",
+	// 		},
+	// 		{
+	// 			name: "Industries Served",
+	// 			path: "#",
+	// 		},
+	// 		{
+	// 			name: "Contact us",
+	// 			path: "#",
+	// 		},
+	// 	];
+	// 	navs.map((item, index) => (
+	// 		<NavItems key={index}>
+	// 			<a href={item.path}>{item.name}</a>
+	// 		</NavItems>
+	// 	));
+	// }
 
 	return (
 		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center selection:bg-foreground selection:text-background">
-			<header className="w-full h-16 p-4 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] md:py-2 z-10 bg-background shadow-2xl shadow-background">
-				<img src="/logo.png" alt="Logo" className="h-20" />
+			<header className="w-full p-2 h-14 md:h-18 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] z-10 bg-background shadow-2xl shadow-background">
+				<img src="/logo.png" alt="Logo" className="h-full scale-120 px-1" />
 				<NavList className="hidden max-w-max md:flex">
-					{navs.map((item, index) => (
-						<NavItems key={index}>
-							<a href={item.path}>{item.name}</a>
-						</NavItems>
-					))}
+					<NavItems>
+						<a href="#hero">Home</a>
+					</NavItems>
+					<NavItems>
+						<a href="#about">About us</a>
+					</NavItems>
+					<NavItems>
+						<a href="#products">Products</a>
+					</NavItems>
+					<NavItems>
+						<a href="#targeting">Industries Served</a>
+					</NavItems>
+					<NavItems>
+						<a href="#contact">Contact us</a>
+					</NavItems>
 				</NavList>
 				<span className="cursor-pointer md:hidden" onClick={hamburgerHandler}>
-					<AlignJustify></AlignJustify>
+					<AlignJustify className="px-2 w-full"></AlignJustify>
 					<NavList
 						className="hidden flex-col absolute w-full h-[calc(100svh-4rem)] top-[100%] right-0 bg-background"
 						id="hamburger"
@@ -72,7 +137,10 @@ export default function App() {
 			</header>
 			<main className="grow-1 w-full relative">
 				{/* Hero */}
-				<section className="flex flex-col justify-center items-center gap-4 p-16 md:flex-row-reverse">
+				<section
+					className="flex flex-col justify-center items-center gap-4 p-16 md:flex-row-reverse"
+					id="hero"
+				>
 					<div className="bg-[url('/hero.jpg')] bg-center bg-cover w-full md:w-[40rem] h-[30rem] absolute top-1 z-[-10] not-md:opacity-50 md:static" />
 
 					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-background">
@@ -92,8 +160,10 @@ export default function App() {
 				</section>
 				{/* Products */}
 				<section
-					className={`flex justify-center items-center w-full md:p-8 shadow flex-wrap gap-4`}
+					className={`flex flex-col justify-center items-center w-full md:p-8 shadow flex-wrap gap-4`}
+					id="products"
 				>
+					Our Products
 					{products.map((item, index) => (
 						<ProductCard
 							imagePath={item.imagePath}
@@ -106,11 +176,20 @@ export default function App() {
 				{/* Industries Served */}
 				<section
 					className={`flex justify-center items-center w-full md:p-8 shadow flex-wrap gap-4`}
+					id="targeting"
 				>
-					<ImagedAccordion />
+					<ImagedAccordion
+						imagePath={targeting[0].imagePath}
+						description={targeting[0].description}
+						heading={targeting[0].heading}
+						key={0}
+					/>
 				</section>
 				{/* Contact Us */}
-				<section className="flex justify-center items-center w-full">
+				<section
+					className="flex justify-center items-center w-full"
+					id="contact"
+				>
 					<div className="w-full p-12 bg-border flex gap-6 justify-center">
 						<img
 							src="hello.svg"
@@ -129,11 +208,11 @@ export default function App() {
 							<a href="mailto:">
 								<Mail className="inline mx-2" /> mail@email.com
 							</a>
-							<a href="tel:+" className="relative w-max">
+							<a href="tel:+" className="relative">
 								<img
 									src="callUs.svg"
 									alt=""
-									className="absolute left-1/2 top-full"
+									className="absolute left-1/6 top-full"
 								/>
 								<Phone className="inline mx-2" /> +91 XXXXXXXXXXX
 							</a>
