@@ -12,6 +12,7 @@ export function ProductCard({
 			<img
 				src={imagePath}
 				className={`h-[85%] max-h-80 max-w-1/2 object-contain`}
+				loading="lazy"
 			/>
 			<div
 				className={`p-[1rem] flex flex-col justify-evenly h-full md:w-[60%]`}
@@ -22,7 +23,9 @@ export function ProductCard({
 					EXCLUSIVE
 				</span>
 
-				<h1 className={`font-medium leading-[90%] text-2xl md:text-3xl my-1`}>{heading}</h1>
+				<h1 className={`font-medium leading-[90%] text-2xl md:text-3xl my-1`}>
+					{heading}
+				</h1>
 
 				<p
 					className={`leading-[120%] text-accent-foreground font-light italic text-[1rem] box-decoration-clone line-clamp-3 my-4`}
