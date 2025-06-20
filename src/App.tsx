@@ -7,7 +7,7 @@ import { ImagedAccordion } from "./components/ImagedAccordion";
 export default function App() {
 	const targeting = [
 		{
-			imagePath: "Mountain_Climbing.jpg",
+			imagePath: "Mountain_Climbing_LQ.jpg",
 			heading: "Mountain Climbing",
 			description:
 				"Some lorem description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis ipsum eligendi minus nam veniam dicta ea voluptate! Omnis, fuga error modi animi, veniam atque mollitia, reprehenderit praesentium explicabo perspiciatis cumque recusandae!.",
@@ -17,54 +17,54 @@ export default function App() {
 
 	const products = [
 		{
-			imagePath: `Braided_Rope.png`,
+			imagePath: `Braided_Rope_LQ.png`,
 			heading: `Braided Rope`,
 			description: `Our Braided Rope is   Strong and Durable, perfect to be used for safety purposes. It is made with high-quality materials, ensuring reliability and safety of the user.`,
 		},
 		{
-			imagePath: "Twisted_Rope.png",
+			imagePath: "Twisted_Rope_LQ.png",
 			heading: "Twisted Rope",
 			description:
 				"Our Twisted Rope is   Strong and Durable, perfect to be used for safety purposes. It is made with high-quality materials, ensuring reliability and safety of the user.",
 		},
 		{
-			imagePath: "Full_Body_Harness.png",
+			imagePath: "Full_Body_Harness_LQ.png",
 			heading: "Full Body Harness",
 			description:
 				"Our Full Body Harness is designed for Comfort, and it is perfect to be used for all safety purposes, maintaining comfort on long sessions.",
 		},
 		{
-			imagePath: "Fall_Arrestor.png",
+			imagePath: "Fall_Arrestor_LQ.png",
 			heading: "Fall Arrestor",
 			description:
 				"Our safety Fall Arrestor automatically engage to halt falls smoothly and reliably, giving you unwavering protection whenever you need it.",
 		},
 		{
-			imagePath: "Grip_Descender.png",
+			imagePath: "Grip_Descender_LQ.png",
 			heading: "Grip Descender",
 			description:
 				"Our intuitive Grip Descender delivers smooth, controlled lowering with consistent, fail-safe braking, so you can descend confidently, every time.",
 		},
 		{
-			imagePath: "Rock_Chair_Seat.png",
+			imagePath: "Rock_Chair_Seat_LQ.png",
 			heading: "Rock Chair Seat",
 			description:
 				"Our safety Rock Chair Seat deliver ergonomic support and steadfast stability, keeping you secure and comfortable during every height operation.",
 		},
 		{
-			imagePath: "Rope_Protector.png",
+			imagePath: "Rope_Protector_LQ.png",
 			heading: "Rope Protector",
 			description:
 				"Our Rope Protector shield your line from abrasion and wear, extending rope life and ensuring dependable performance every time.",
 		},
 		{
-			imagePath: "Carabiner.png",
+			imagePath: "Carabiner_LQ.png",
 			heading: "Carabiner",
 			description:
 				"Our Carabiners features a dependable and strong auto-locking gate for consistent, everyday safety.",
 		},
 		{
-			imagePath: "Bag.png",
+			imagePath: "Bag_LQ.png",
 			heading: "Bag",
 			description:
 				"Our Bag is Strong, Durable and Dependable, can easily hold all the essential safety tools.",
