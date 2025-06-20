@@ -246,7 +246,8 @@ export default function App() {
 				<section>
 					{/* Logo */}
 					Shyama Industries believes in saving lives by manufacturing and
-					supplying high-quality safety equipment and solutions.
+					supplying high-quality safety equipment and solutions. <br /> This
+					webpage is under active development.
 				</section>
 				<section>{/* Quick Link */}</section>
 				<section>{/* Our Products */}</section>
