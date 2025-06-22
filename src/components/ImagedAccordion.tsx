@@ -7,7 +7,7 @@ export function ImagedAccordion({
 }) {
 	return (
 		<span
-			className={`group relative flex flex-col-reverse h-[40svh] **:duration-500 overflow-hidden hover:shadow-2xl transition-all duration-500 m-2 rounded-xl border border-destructive`}
+			className={`group relative flex flex-col-reverse h-[40svh] **:duration-500 overflow-hidden hover:shadow-2xl transition-all duration-500 rounded-xl border border-destructive`}
 		>
 			<img
 				src={imagePath}

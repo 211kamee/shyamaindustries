@@ -3,6 +3,13 @@ import { NavList, NavItems } from "@/components/NavHelper";
 import { Button } from "./components/ui/button";
 import { ProductCard } from "./components/ProductCard";
 import { ImagedAccordion } from "./components/ImagedAccordion";
+import {
+	Card,
+	CardContent,
+	CardTitle,
+	CardDescription,
+} from "./components/ui/card";
+import { DialogBox } from "./components/DialogBox";
 
 export default function App() {
 	const targeting = [
@@ -12,7 +19,12 @@ export default function App() {
 			description:
 				"Some lorem description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis ipsum eligendi minus nam veniam dicta ea voluptate! Omnis, fuga error modi animi, veniam atque mollitia, reprehenderit praesentium explicabo perspiciatis cumque recusandae!.",
 		},
-		// { imagePath: "", heading: "", description: "" },
+		// {
+		// 	imagePath: "Mountain_Climbing_LQ.jpg",
+		// 	heading: "Construction",
+		// 	description: "",
+		// },
+		// { imagePath: "Mountain_Climbing_LQ.jpg", heading: "Army", description: "" },
 	];
 
 	const products = [
@@ -74,9 +86,9 @@ export default function App() {
 
 	const contact = {
 		email: "email@email.com",
-		phone: "+91 0000000000",
-		address: "Delhi NCR, India",
-		map: "",
+		phone: "+91 9910316881",
+		address: "113, Vrindavan Garden, Sahibabad, Ghaziabad, UP 201005, INDIA",
+		map: "https://maps.app.goo.gl/Luq4UqtYEH4m1st99?g_st=aw",
 	};
 
 	// {
@@ -111,6 +123,7 @@ export default function App() {
 
 	return (
 		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center selection:bg-foreground selection:text-background">
+			{/* <DialogBox></DialogBox> */}
 			<header className="w-full px-4 h-14 md:h-18 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] z-10 bg-background shadow-2xl shadow-background">
 				<a href="/" className="h-full">
 					<img src="/logo_LQ.png" alt="Logo" className="h-full scale-120 p-2" />
@@ -147,7 +160,9 @@ export default function App() {
 					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-background">
 						<h2 className="md:text-7xl text-5xl font-medium">
 							Saving thousands of{" "}
-							<span className="underline decoration-destructive decoration-[8px]">lives</span>{" "}
+							<span className="underline decoration-destructive decoration-[8px]">
+								lives
+							</span>{" "}
 							daily
 						</h2>
 						<p className="">
@@ -163,6 +178,34 @@ export default function App() {
 						</Button>
 					</span>
 				</section>
+				{/* About us */}
+				<section
+					className={`flex flex-col justify-center items-center w-full md:p-8 gap-4`}
+					id="about"
+				>
+					<Card className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl border border-destructive m-6">
+						<CardContent>
+							<CardTitle className="text-4xl font-medium underline w-full decoration-destructive md:text-center p-8">
+								About us
+							</CardTitle>
+							<CardDescription className="text-foreground text-lg">
+								Welcome to Shyama Industries — your trusted partner in safety,
+								strength, and reliability. We specialize in manufacturing and
+								supplying high-quality twisted and braided ropes, along with a
+								wide range of industrial safety equipment including carabiners,
+								grip descenders, fall arrestors, rock chairs, harnesses, rope
+								protectors, and ratchets.
+								<br />
+								<br /> With a commitment to durability and performance, our
+								products are designed to meet the highest standards for
+								industries like construction, climbing, rescue operations, and
+								material handling. At Shyama Industries, we believe in providing
+								dependable solutions that keep your team secure and your
+								operations running smoothly.
+							</CardDescription>
+						</CardContent>
+					</Card>
+				</section>
 				{/* Products */}
 				<section
 					className={`flex flex-col justify-center items-center w-full md:p-8 gap-4`}
@@ -171,7 +214,7 @@ export default function App() {
 					<h2 className="text-4xl font-medium underline w-full decoration-destructive md:text-center p-8">
 						PRODUCTS
 					</h2>
-					<div className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl">
+					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl m-4">
 						{products.map((item, index) => (
 							<ProductCard
 								imagePath={item.imagePath}
@@ -190,13 +233,15 @@ export default function App() {
 					<h2 className="text-4xl font-medium underline w-full decoration-destructive md:text-center p-8">
 						INDUSTRIES SERVED
 					</h2>
-					<div className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl">
-						<ImagedAccordion
-							imagePath={targeting[0].imagePath}
-							description={targeting[0].description}
-							heading={targeting[0].heading}
-							key={0}
-						/>
+					<div className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl m-4">
+						{targeting.map((item, index) => (
+							<ImagedAccordion
+								imagePath={item.imagePath}
+								description={item.description}
+								heading={item.heading}
+								key={index}
+							/>
+						))}
 					</div>
 				</section>
 				{/* Contact Us */}
@@ -210,12 +255,13 @@ export default function App() {
 							className="max-h-96 md:w-1/2 object-contain object-right "
 						/>
 						<div className="flex flex-col md:w-1/2 justify-center md:p-4 gap-8">
-							<span>We look forward to hearing from you!</span>
 							<h2 className="text-2xl font-bold">Contact us</h2>
 							<p className="max-w-96">
-								Feel free to reach us out for any general and sales inquiry.
+								Interest in our products? <br /> Feel free to reach us out for
+								any order and sales related inquiry.
 							</p>
-							<a href={`${contact.map}`}>
+							<span>We look forward to hearing from you!</span>
+							<a href={`${contact.map}`} className="">
 								<MapPin className="inline mx-2" /> {contact.address}
 							</a>
 							<a href={`mailto:${contact.email}`}>
@@ -242,9 +288,11 @@ export default function App() {
 					supplying high-quality safety equipment and solutions. <br /> This
 					webpage is under active development.
 				</section>
-				<section>{/* Quick Link */}</section>
-				<section>{/* Our Products */}</section>
-				<section>{/* Contacts */}</section>
+				{/* 
+				<section>Quick Link</section>
+				<section>Our Products</section>
+				<section>Contacts</section> 
+				*/}
 			</footer>
 		</div>
 	);
