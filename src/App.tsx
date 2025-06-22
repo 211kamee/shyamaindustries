@@ -9,7 +9,7 @@ import {
 	CardTitle,
 	CardDescription,
 } from "./components/ui/card";
-import { DialogBox } from "./components/DialogBox";
+// import { DialogBox } from "./components/DialogBox";
 
 export default function App() {
 	const targeting = [
