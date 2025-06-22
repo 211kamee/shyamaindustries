@@ -147,7 +147,7 @@ export default function App() {
 					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-background">
 						<h2 className="md:text-7xl text-5xl font-medium">
 							Saving thousands of{" "}
-							<span className="underline decoration-destructive">lives</span>{" "}
+							<span className="underline decoration-destructive decoration-[8px]">lives</span>{" "}
 							daily
 						</h2>
 						<p className="">

@@ -7,7 +7,7 @@ export function ImagedAccordion({
 }) {
 	return (
 		<span
-			className={`group relative flex flex-col-reverse h-[40svh] **:duration-500 overflow-hidden hover:shadow-2xl transition-all duration-500 m-2 rounded-xl border`}
+			className={`group relative flex flex-col-reverse h-[40svh] **:duration-500 overflow-hidden hover:shadow-2xl transition-all duration-500 m-2 rounded-xl border border-destructive`}
 		>
 			<img
 				src={imagePath}
@@ -18,8 +18,8 @@ export function ImagedAccordion({
 				className="absolute w-full bg-background/90 min-h-0 group-hover:min-h-full delay-500 group-hover:delay-0"
 				id="image_accordion"
 			>
-				<h2 className="p-4 font-bold text-xl text-shadow-2xs text-shadow-foreground flex justify-between">
-					<span>{heading}</span>
+				<h2 className="p-4 font-bold text-xl text-shadow-2xs text-shadow-foreground flex justify-center">
+					<span className="text-center grow">{heading}</span>
 					<button
 						className="group-hover:rotate-180 "
 						id="arrow"
