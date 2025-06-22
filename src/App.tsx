@@ -183,7 +183,7 @@ export default function App() {
 					className={`flex flex-col justify-center items-center w-full md:p-8 gap-4`}
 					id="about"
 				>
-					<Card className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl border border-destructive m-6">
+					<Card className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl border border-destructive m-4">
 						<CardContent>
 							<CardTitle className="text-4xl font-medium underline w-full decoration-destructive md:text-center p-8">
 								About us
@@ -255,10 +255,10 @@ export default function App() {
 							className="max-h-96 md:w-1/2 object-contain object-right "
 						/>
 						<div className="flex flex-col md:w-1/2 justify-center md:p-4 gap-8">
-							<h2 className="text-2xl font-bold">Contact us</h2>
+							<h2 className="text-3xl font-bold">Contact us</h2>
 							<p className="max-w-96">
-								Interest in our products? <br /> Feel free to reach us out for
-								any order and sales related inquiry.
+								Interest in our products? <br /> Feel free to reach us for
+								ordering our products, and any sales related inquiry.
 							</p>
 							<span>We look forward to hearing from you!</span>
 							<a href={`${contact.map}`} className="">
