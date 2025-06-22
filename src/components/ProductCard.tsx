@@ -8,7 +8,7 @@ export function ProductCard({
 }) {
 	return (
 		<Card
-			className={`relative hover:shadow-2xl duration-500 transition-all flex flex-col md:flex-row-reverse items-center bg-accent md:aspect-[3/2] md:w-[550px] w-full p-6 not-md:mx-4 not-md:my-2`}
+			className={`relative hover:shadow-2xs duration-500 transition-all flex flex-col md:flex-row-reverse items-center bg-accent md:aspect-[3/2] md:w-[550px] w-full p-6 not-md:mx-4 not-md:my-2`}
 		>
 			<img
 				src={imagePath}

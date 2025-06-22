@@ -113,11 +113,7 @@ export default function App() {
 		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center selection:bg-foreground selection:text-background">
 			<header className="w-full px-4 h-14 md:h-18 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] z-10 bg-background shadow-2xl shadow-background">
 				<a href="/" className="h-full">
-					<img
-						src="/logo_LQ.png"
-						alt="Logo"
-						className="h-full scale-120 p-2 bg-white"
-					/>
+					<img src="/logo_LQ.png" alt="Logo" className="h-full scale-120 p-2" />
 				</a>
 				<NavList className="hidden max-w-max md:flex">
 					<NavItems href="#hero">Home</NavItems>
