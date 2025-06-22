@@ -4,7 +4,7 @@ function NavList({ className, ...props }: React.ComponentProps<"ul">) {
 	return (
 		<ul
 			className={cn(
-				"group flex flex-1 flex-wrap list-none items-center gap-2",
+				"group flex flex-wrap list-none items-center md:justify-end gap-2",
 				className
 			)}
 			{...props}
@@ -12,15 +12,17 @@ function NavList({ className, ...props }: React.ComponentProps<"ul">) {
 	);
 }
 
-function NavItems({ className, ...props }: React.ComponentProps<"li">) {
+function NavItems({ className, ...props }: React.ComponentProps<"a">) {
 	return (
-		<li
-			className={cn(
-				"data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:ring-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col rounded-sm p-2 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
-				className
-			)}
-			{...props}
-		/>
+		<li>
+			<a
+				className={cn(
+					"relative p-1 m-1 before:content-[''] before:h-1/16 before:w-0 before:bg-foreground before:absolute before:top-0 before:left-0 after:content-[''] after:h-1/16 after:w-0 after:bg-foreground after:absolute after:bottom-0 after:right-0 hover:before:w-full hover:after:w-full before:transition-all after:transition-all",
+					className
+				)}
+				{...props}
+			></a>
+		</li>
 	);
 }
 

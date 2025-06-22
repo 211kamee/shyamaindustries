@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function ProductCard({
 	imagePath = "#",
@@ -6,19 +7,19 @@ export function ProductCard({
 	description = "...",
 }) {
 	return (
-		<div
-			className={`relative hover:shadow-2xl duration-500 transition-all md:aspect-video flex flex-col md:flex-row-reverse items-center bg-background md:w-[550px] w-full p-6`}
+		<Card
+			className={`relative hover:shadow-2xl duration-500 transition-all flex flex-col md:flex-row-reverse items-center bg-accent md:aspect-[3/2] md:w-[550px] w-full p-6 not-md:mx-4 not-md:my-2`}
 		>
 			<img
 				src={imagePath}
-				className={`h-[85%] max-h-80 max-w-1/2 object-contain`}
+				className={`h-[85%] max-h-80 max-w-1/2 object-contain drop-shadow-foreground/40 drop-shadow-2xl`}
 				loading="lazy"
 			/>
-			<div
+			<CardContent
 				className={`p-[1rem] flex flex-col justify-evenly h-full md:w-[60%]`}
 			>
 				<span
-					className={`px-[0.8rem] py-[0.4rem] max-w-max rounded-[100px] bg-destructive text-background text-[0.5rem] md:text-[0.8rem] my-1`}
+					className={`px-[0.8rem] py-[0.4rem] max-w-max rounded-[100px] bg-destructive text-white text-[0.5rem] md:text-[0.8rem] my-1 font-medium`}
 				>
 					EXCLUSIVE
 				</span>
@@ -28,20 +29,19 @@ export function ProductCard({
 				</h1>
 
 				<p
-					className={`leading-[120%] text-accent-foreground font-light italic text-[1rem] box-decoration-clone line-clamp-3 my-4`}
+					className={`leading-[120%] text-accent-foreground font-light italic text-[1rem] my-4`}
 				>
 					{description}
 				</p>
 
 				<Button
 					variant={"outline"}
-					className={`w-fit h-fit rounded-[100px] text-[0.8rem] my-2`}
+					className={`w-fit h-fit text-[0.8rem] not-md:w-full my-2 font-bold rounded-[50px]`}
+					asChild
 				>
-					<a className={`font-bold rounded-[50px]`} href="#">
-						GET IT NOW !
-					</a>
+					<a href="/#contact">GET IT NOW !</a>
 				</Button>
-			</div>
-		</div>
+			</CardContent>
+		</Card>
 	);
 }

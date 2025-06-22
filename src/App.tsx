@@ -72,6 +72,13 @@ export default function App() {
 		// { imagePath: "", heading: "", description: "" },
 	];
 
+	const contact = {
+		email: "email@email.com",
+		phone: "+91 0000000000",
+		address: "Delhi NCR, India",
+		map: "",
+	};
+
 	// {
 	// 	const navs = [
 	// 		{
@@ -104,46 +111,32 @@ export default function App() {
 
 	return (
 		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center selection:bg-foreground selection:text-background">
-			<header className="w-full p-2 h-14 md:h-18 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] z-10 bg-background shadow-2xl shadow-background">
-				<img src="/logo_LQ.png" alt="Logo" className="h-full scale-120 px-1" />
+			<header className="w-full px-4 h-14 md:h-18 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] z-10 bg-background shadow-2xl shadow-background">
+				<a href="/" className="h-full">
+					<img
+						src="/logo_LQ.png"
+						alt="Logo"
+						className="h-full scale-120 p-2 bg-white"
+					/>
+				</a>
 				<NavList className="hidden max-w-max md:flex">
-					<NavItems>
-						<a href="#hero">Home</a>
-					</NavItems>
-					<NavItems>
-						<a href="#about">About us</a>
-					</NavItems>
-					<NavItems>
-						<a href="#products">Products</a>
-					</NavItems>
-					<NavItems>
-						<a href="#targeting">Industries Served</a>
-					</NavItems>
-					<NavItems>
-						<a href="#contact">Contact us</a>
-					</NavItems>
+					<NavItems href="#hero">Home</NavItems>
+					<NavItems href="#about">About us</NavItems>
+					<NavItems href="#products">Products</NavItems>
+					<NavItems href="#targeting">Industries Served</NavItems>
+					<NavItems href="#contact">Contact us</NavItems>
 				</NavList>
 				<span className="cursor-pointer md:hidden" onClick={hamburgerHandler}>
-					<AlignJustify className="px-2 w-full"></AlignJustify>
+					<AlignJustify className="h-full"></AlignJustify>
 					<NavList
-						className="hidden flex-col absolute w-full h-[calc(100svh-4rem)] top-[100%] right-0 bg-background"
+						className="hidden flex-col absolute w-full h-[calc(100svh-3.4rem)] top-[100%] right-0 bg-background"
 						id="hamburger"
 					>
-						<NavItems>
-							<a href="#hero">Home</a>
-						</NavItems>
-						<NavItems>
-							<a href="#about">About us</a>
-						</NavItems>
-						<NavItems>
-							<a href="#products">Products</a>
-						</NavItems>
-						<NavItems>
-							<a href="#targeting">Industries Served</a>
-						</NavItems>
-						<NavItems>
-							<a href="#contact">Contact us</a>
-						</NavItems>
+						<NavItems href="#hero">Home</NavItems>
+						<NavItems href="#about">About us</NavItems>
+						<NavItems href="#products">Products</NavItems>
+						<NavItems href="#targeting">Industries Served</NavItems>
+						<NavItems href="#contact">Contact us</NavItems>
 					</NavList>
 				</span>
 			</header>
@@ -158,14 +151,19 @@ export default function App() {
 					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-background">
 						<h2 className="md:text-7xl text-5xl font-medium">
 							Saving thousands of{" "}
-							<span className="underline decoration-chart-1">lives</span> daily
+							<span className="underline decoration-destructive">lives</span>{" "}
+							daily
 						</h2>
 						<p className="">
 							Shyama Industries is a leading Fall Protection solutions brand.
 						</p>
-						<Button className="max-w-max">Learn more</Button>
-						<Button variant={"outline"}>
-							Products <ArrowRight />
+						<Button className="max-w-max">
+							<a href="#about">Learn more</a>
+						</Button>
+						<Button variant={"outline"} asChild>
+							<a href="#products">
+								Products <ArrowRight />
+							</a>
 						</Button>
 					</span>
 				</section>
@@ -174,10 +172,10 @@ export default function App() {
 					className={`flex flex-col justify-center items-center w-full md:p-8 gap-4`}
 					id="products"
 				>
-					<h2 className="text-4xl font-medium underline w-full decoration-chart-1 md:text-center p-8">
+					<h2 className="text-4xl font-medium underline w-full decoration-destructive md:text-center p-8">
 						PRODUCTS
 					</h2>
-					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl">
+					<div className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl">
 						{products.map((item, index) => (
 							<ProductCard
 								imagePath={item.imagePath}
@@ -193,10 +191,10 @@ export default function App() {
 					className={`flex flex-col justify-center items-center w-full md:p-8 gap-4`}
 					id="targeting"
 				>
-					<h2 className="text-4xl font-medium underline w-full decoration-chart-1 md:text-center p-8">
+					<h2 className="text-4xl font-medium underline w-full decoration-destructive md:text-center p-8">
 						INDUSTRIES SERVED
 					</h2>
-					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl">
+					<div className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl">
 						<ImagedAccordion
 							imagePath={targeting[0].imagePath}
 							description={targeting[0].description}
@@ -213,7 +211,7 @@ export default function App() {
 					<div className="w-full p-12 flex gap-6 justify-center not-md:flex-col">
 						<img
 							src="hello.svg"
-							className="max-h-96 md:w-1/2 object-contain object-right"
+							className="max-h-96 md:w-1/2 object-contain object-right "
 						/>
 						<div className="flex flex-col md:w-1/2 justify-center md:p-4 gap-8">
 							<span>We look forward to hearing from you!</span>
@@ -221,20 +219,19 @@ export default function App() {
 							<p className="max-w-96">
 								Feel free to reach us out for any general and sales inquiry.
 							</p>
-							<a href="#">
-								<MapPin className="inline mx-2" /> Lorem ipsum dolor sit amet
-								consectetur adipisicing elit. Omnis, officiis.
+							<a href={`${contact.map}`}>
+								<MapPin className="inline mx-2" /> {contact.address}
 							</a>
-							<a href="mailto:">
-								<Mail className="inline mx-2" /> mail@email.com
+							<a href={`mailto:${contact.email}`}>
+								<Mail className="inline mx-2" /> {contact.email}
 							</a>
-							<a href="tel:+" className="relative">
+							<a href={`tel:${contact.phone}`} className="relative">
 								<img
 									src="callUs.svg"
 									alt=""
 									className="absolute left-1/6 top-full"
 								/>
-								<Phone className="inline mx-2" /> +91 XXXXXXXXXXX
+								<Phone className="inline mx-2" /> {contact.phone}
 							</a>
 						</div>
 					</div>
