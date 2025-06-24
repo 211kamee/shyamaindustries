@@ -85,7 +85,7 @@ export default function App() {
 	];
 
 	const contact = {
-		email: "email@email.com",
+		email: "shyamaindustries573@gmail.com",
 		phone: "+91 9910316881",
 		address: "113, Vrindavan Garden, Sahibabad, Ghaziabad, UP 201005, INDIA",
 		map: "https://maps.app.goo.gl/Luq4UqtYEH4m1st99?g_st=aw",
