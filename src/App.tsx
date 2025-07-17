@@ -14,69 +14,69 @@ import {
 export default function App() {
 	const targeting = [
 		{
-			imagePath: "Mountain_Climbing_LQ.jpg",
+			imagePath: "Mountain_Climbing.jpg",
 			heading: "Mountain Climbing",
 			description:
 				"Some lorem description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis ipsum eligendi minus nam veniam dicta ea voluptate! Omnis, fuga error modi animi, veniam atque mollitia, reprehenderit praesentium explicabo perspiciatis cumque recusandae!.",
 		},
 		// {
-		// 	imagePath: "Mountain_Climbing_LQ.jpg",
+		// 	imagePath: "Mountain_Climbing.jpg",
 		// 	heading: "Construction",
 		// 	description: "",
 		// },
-		// { imagePath: "Mountain_Climbing_LQ.jpg", heading: "Army", description: "" },
+		// { imagePath: "Mountain_Climbing.jpg", heading: "Army", description: "" },
 	];
 
 	const products = [
 		{
-			imagePath: `Braided_Rope_LQ.png`,
+			imagePath: `Braided_Rope.png`,
 			heading: `Braided Rope`,
 			description: `Our Braided Rope is   Strong and Durable, perfect to be used for safety purposes. It is made with high-quality materials, ensuring reliability and safety of the user.`,
 		},
 		{
-			imagePath: "Twisted_Rope_LQ.png",
+			imagePath: "Twisted_Rope.png",
 			heading: "Twisted Rope",
 			description:
 				"Our Twisted Rope is   Strong and Durable, perfect to be used for safety purposes. It is made with high-quality materials, ensuring reliability and safety of the user.",
 		},
 		{
-			imagePath: "Full_Body_Harness_LQ.png",
+			imagePath: "Full_Body_Harness.png",
 			heading: "Full Body Harness",
 			description:
 				"Our Full Body Harness is designed for Comfort, and it is perfect to be used for all safety purposes, maintaining comfort on long sessions.",
 		},
 		{
-			imagePath: "Fall_Arrestor_LQ.png",
+			imagePath: "Fall_Arrestor.png",
 			heading: "Fall Arrestor",
 			description:
 				"Our safety Fall Arrestor automatically engage to halt falls smoothly and reliably, giving you unwavering protection whenever you need it.",
 		},
 		{
-			imagePath: "Grip_Descender_LQ.png",
+			imagePath: "Grip_Descender.png",
 			heading: "Grip Descender",
 			description:
 				"Our intuitive Grip Descender delivers smooth, controlled lowering with consistent, fail-safe braking, so you can descend confidently, every time.",
 		},
 		{
-			imagePath: "Rock_Chair_Seat_LQ.png",
+			imagePath: "Rock_Chair_Seat.png",
 			heading: "Rock Chair Seat",
 			description:
 				"Our safety Rock Chair Seat deliver ergonomic support and steadfast stability, keeping you secure and comfortable during every height operation.",
 		},
 		{
-			imagePath: "Rope_Protector_LQ.png",
+			imagePath: "Rope_Protector.png",
 			heading: "Rope Protector",
 			description:
 				"Our Rope Protector shield your line from abrasion and wear, extending rope life and ensuring dependable performance every time.",
 		},
 		{
-			imagePath: "Carabiner_LQ.png",
+			imagePath: "Carabiner.png",
 			heading: "Carabiner",
 			description:
 				"Our Carabiners features a dependable and strong auto-locking gate for consistent, everyday safety.",
 		},
 		{
-			imagePath: "Bag_LQ.png",
+			imagePath: "Bag.png",
 			heading: "Bag",
 			description:
 				"Our Bag is Strong, Durable and Dependable, can easily hold all the essential safety tools.",
@@ -126,7 +126,7 @@ export default function App() {
 			{/* <DialogBox></DialogBox> */}
 			<header className="w-full px-4 h-14 md:h-18 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] z-10 bg-background shadow-2xl shadow-background">
 				<a href="/" className="h-full">
-					<img src="/logo_LQ.png" alt="Logo" className="h-full scale-120 p-2" />
+					<img src="/logo.png" alt="Logo" className="h-full scale-120 p-2" />
 				</a>
 				<NavList className="hidden max-w-max md:flex">
 					<NavItems href="#hero">Home</NavItems>
@@ -155,7 +155,7 @@ export default function App() {
 					className="flex flex-col justify-center items-center relative gap-4 not-md:my-8 p-16 md:flex-row-reverse min-h-[30rem]"
 					id="hero"
 				>
-					<div className="bg-[url('/hero_LQ.jpg')] bg-center bg-cover bg-no-repeat w-full md:w-[40rem] h-[30rem] absolute z-[-10] not-md:opacity-50 md:static" />
+					<div className="bg-[url('/hero.jpg')] bg-center bg-cover bg-no-repeat w-full md:w-[40rem] h-[30rem] absolute z-[-10] not-md:opacity-50 md:static" />
 
 					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-background">
 						<h2 className="md:text-7xl text-5xl font-medium">
