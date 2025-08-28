@@ -29,7 +29,7 @@ export default function Home() {
 		{
 			id: "military",
 			imagePath: "Military_HQ.png",
-			heading: "military",
+			heading: "Military",
 			description:
 				"Shyama Industries is a trusted manufacturer of braided and twisted ropes engineered for military applications. With a focus on strength, safety, and reliability, our ropes withstand extreme conditions in training and combat. We provide defense forces with dependable solutions for climbing, securing equipment, and mission-critical operations.",
 		},
