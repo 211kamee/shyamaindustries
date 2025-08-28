@@ -182,7 +182,7 @@ export default function Home() {
 					<h2 className="text-4xl font-medium underline w-full decoration-destructive md:text-center p-8">
 						INDUSTRIES SERVED
 					</h2>
-					<div className="flex justify-center items-center flex-wrap md:gap-4 max-w-6xl m-4">
+					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl m-4">
 						{targeting.map((item, index) => (
 							<ImagedAccordion
 								imagePath={item.imagePath}
