@@ -8,7 +8,7 @@ export function ProductCard({
 }) {
 	return (
 		<Card
-			className={`relative hover:shadow-2xl duration-500 transition-all flex flex-col md:flex-row-reverse items-center bg-accent border border-destructive md:aspect-[3/2] md:w-[550px] w-full p-6 `}
+			className={`relative hover:shadow-2xl duration-500 transition-all flex flex-col md:flex-row-reverse items-center border border-destructive md:aspect-[3/2] md:w-[550px] w-full p-6 `}
 		>
 			<img
 				src={imagePath}
@@ -18,12 +18,12 @@ export function ProductCard({
 			<CardContent
 				className={`p-[1rem] flex flex-col justify-evenly h-full md:w-[60%]`}
 			>
-				<h1 className={`font-medium leading-[90%] text-2xl md:text-3xl my-1`}>
+				<h1 className={`font-medium leading-[90%] text-2xl md:text-3xl my-1 font-dsc`}>
 					{heading}
 				</h1>
 
 				<p
-					className={`leading-[120%] text-accent-foreground font-light italic text-[1rem] my-4`}
+					className={`leading-[120%] text-accent-foreground font-light text-[1rem] my-4`}
 				>
 					{description}
 				</p>

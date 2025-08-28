@@ -5,6 +5,7 @@
 
 @theme inline {
 	/* Custom */
+	--font-dsc: var(--font-dsc), ui-sans-serif, system-ui, sans-serif;
 
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
@@ -115,17 +116,18 @@
 @layer base {
 	* {
 		@apply border-border outline-ring/50;
+		box-sizing: border-box;
 	}
 	body {
 		@apply bg-background text-foreground;
 	}
-}
-
-* {
-	box-sizing: border-box;
-}
-
-html {
-	scroll-behavior: smooth;
-	scroll-padding: 3rem;
+	html {
+		scroll-behavior: smooth;
+		scroll-padding: 4.5rem;
+	}
+	@media not (width >= 48rem /* 768px */) {
+		html {
+			scroll-padding: 3.5rem;
+		}
+	}
 }
