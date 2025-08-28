@@ -5,6 +5,7 @@ export function ImagedAccordion({
 	imagePath = "#",
 	heading = "#",
 	description = "...",
+	id = "image_accordian",
 }) {
 	return (
 		<span
@@ -17,7 +18,7 @@ export function ImagedAccordion({
 			/>
 			<div
 				className="absolute w-full bg-background/90 min-h-0 group-hover:min-h-full delay-500 group-hover:delay-0"
-				id="image_accordion"
+				id={id}
 			>
 				<h2 className="p-4 font-bold text-xl text-shadow-2xs text-shadow-foreground flex justify-center">
 					<span className="text-center grow">{heading}</span>
@@ -26,12 +27,13 @@ export function ImagedAccordion({
 						id="arrow"
 						onClick={() => {
 							const image_accordion = document.querySelector(
-								"#image_accordion"
+								`#${id}`
 							) as HTMLElement;
-							const arrow = document.querySelector("#arrow") as HTMLElement;
-							const description = document.querySelector(
-								"#description"
-							) as HTMLElement;
+
+							const arrow = image_accordion.childNodes[0]
+								.childNodes[1] as HTMLElement;
+
+							const description = image_accordion.childNodes[1] as HTMLElement;
 
 							if (arrow.style.rotate === "180deg") {
 								image_accordion.style.minHeight = "";

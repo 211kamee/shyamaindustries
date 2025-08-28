@@ -13,20 +13,23 @@ import {
 export default function Home() {
 	const targeting = [
 		{
+			id: "mountain_climbing",
 			imagePath: "Mountain_Climbing_HQ.png",
 			heading: "Mountain Climbing",
 			description:
 				"Shyama Industries specializes in braided and twisted ropes and advanced safety equipment designed also for the Mountain Climbing. Our products combine strength, durability, and precision to ensure maximum safety in challenging environments. Trusted by climbers and adventure professionals, we deliver reliable gear that supports every ascent with confidence.",
 		},
 		{
+			id: "construction",
 			imagePath: "Construction_HQ.png",
 			heading: "Construction",
 			description:
 				"Shyama Industries manufactures durable braided and twisted ropes along with reliable safety equipment for the construction sector. Designed to handle heavy loads and tough conditions, our products ensure strength, safety, and efficiency at worksites. We are committed to supporting builders with trusted solutions that enhance performance and reliability",
 		},
 		{
-			imagePath: "Miltrary_HQ.png",
-			heading: "Miltrary",
+			id: "military",
+			imagePath: "Military_HQ.png",
+			heading: "military",
 			description:
 				"Shyama Industries is a trusted manufacturer of braided and twisted ropes engineered for military applications. With a focus on strength, safety, and reliability, our ropes withstand extreme conditions in training and combat. We provide defense forces with dependable solutions for climbing, securing equipment, and mission-critical operations.",
 		},
@@ -188,6 +191,7 @@ export default function Home() {
 								imagePath={item.imagePath}
 								description={item.description}
 								heading={item.heading}
+								id={item.id}
 								key={index}
 							/>
 						))}
