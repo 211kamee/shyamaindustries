@@ -18,12 +18,6 @@ export function ProductCard({
 			<CardContent
 				className={`p-[1rem] flex flex-col justify-evenly h-full md:w-[60%]`}
 			>
-				{/* <span
-					className={`px-[0.8rem] py-[0.4rem] max-w-max rounded-[100px] bg-destructive text-white text-[0.5rem] md:text-[0.8rem] my-1 font-medium`}
-				>
-					EXCLUSIVE
-				</span> */}
-
 				<h1 className={`font-medium leading-[90%] text-2xl md:text-3xl my-1`}>
 					{heading}
 				</h1>

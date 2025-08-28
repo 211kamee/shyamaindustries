@@ -1,30 +1,35 @@
-import { AlignJustify, ArrowRight, Phone, Mail, MapPin } from "lucide-react";
-import { NavList, NavItems } from "@/components/NavHelper";
-import { Button } from "./components/ui/button";
-import { ProductCard } from "./components/ProductCard";
-import { ImagedAccordion } from "./components/ImagedAccordion";
+import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { ProductCard } from "@/components/ProductCard";
+import { ImagedAccordion } from "@/components/ImagedAccordion";
 import {
 	Card,
 	CardContent,
 	CardTitle,
 	CardDescription,
-} from "./components/ui/card";
-// import { DialogBox } from "./components/DialogBox";
+} from "@/components/ui/card";
 
-export default function App() {
+export default function Home() {
 	const targeting = [
 		{
-			imagePath: "Mountain_Climbing.jpg",
+			imagePath: "Mountain_Climbing_HQ.png",
 			heading: "Mountain Climbing",
 			description:
-				"Some lorem description Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis ipsum eligendi minus nam veniam dicta ea voluptate! Omnis, fuga error modi animi, veniam atque mollitia, reprehenderit praesentium explicabo perspiciatis cumque recusandae!.",
+				"Shyama Industries specializes in braided and twisted ropes and advanced safety equipment designed also for the Mountain Climbing. Our products combine strength, durability, and precision to ensure maximum safety in challenging environments. Trusted by climbers and adventure professionals, we deliver reliable gear that supports every ascent with confidence.",
 		},
-		// {
-		// 	imagePath: "Mountain_Climbing.jpg",
-		// 	heading: "Construction",
-		// 	description: "",
-		// },
-		// { imagePath: "Mountain_Climbing.jpg", heading: "Army", description: "" },
+		{
+			imagePath: "Construction_HQ.png",
+			heading: "Construction",
+			description:
+				"Shyama Industries manufactures durable braided and twisted ropes along with reliable safety equipment for the construction sector. Designed to handle heavy loads and tough conditions, our products ensure strength, safety, and efficiency at worksites. We are committed to supporting builders with trusted solutions that enhance performance and reliability",
+		},
+		{
+			imagePath: "Miltrary_HQ.png",
+			heading: "Miltrary",
+			description:
+				"Shyama Industries is a trusted manufacturer of braided and twisted ropes engineered for military applications. With a focus on strength, safety, and reliability, our ropes withstand extreme conditions in training and combat. We provide defense forces with dependable solutions for climbing, securing equipment, and mission-critical operations.",
+		},
 	];
 
 	const products = [
@@ -91,64 +96,8 @@ export default function App() {
 		map: "https://maps.app.goo.gl/Luq4UqtYEH4m1st99?g_st=aw",
 	};
 
-	// {
-	// 	const navs = [
-	// 		{
-	// 			name: "Home",
-	// 			path: "#",
-	// 		},
-	// 		{
-	// 			name: "About us",
-	// 			path: "#",
-	// 		},
-	// 		{
-	// 			name: "Products",
-	// 			path: "#",
-	// 		},
-	// 		{
-	// 			name: "Industries Served",
-	// 			path: "#",
-	// 		},
-	// 		{
-	// 			name: "Contact us",
-	// 			path: "#",
-	// 		},
-	// 	];
-	// 	navs.map((item, index) => (
-	// 		<NavItems key={index}>
-	// 			<a href={item.path}>{item.name}</a>
-	// 		</NavItems>
-	// 	));
-	// }
-
 	return (
 		<div className="w-full min-h-[100svh] flex flex-col justify-between items-center selection:bg-foreground selection:text-background">
-			{/* <DialogBox></DialogBox> */}
-			<header className="w-full px-4 h-14 md:h-18 sticky flex justify-between items-center break-all font-bold top-0 md:px-[12vw] z-10 bg-background shadow-2xl shadow-background">
-				<a href="/" className="h-full">
-					<img src="/logo.png" alt="Logo" className="h-full scale-120 p-2" />
-				</a>
-				<NavList className="hidden max-w-max md:flex">
-					<NavItems href="#hero">Home</NavItems>
-					<NavItems href="#about">About us</NavItems>
-					<NavItems href="#products">Products</NavItems>
-					<NavItems href="#targeting">Industries Served</NavItems>
-					<NavItems href="#contact">Contact us</NavItems>
-				</NavList>
-				<span className="cursor-pointer md:hidden" onClick={hamburgerHandler}>
-					<AlignJustify className="h-full"></AlignJustify>
-					<NavList
-						className="hidden flex-col absolute w-full h-[calc(100svh-3.4rem)] top-[100%] right-0 bg-background"
-						id="hamburger"
-					>
-						<NavItems href="#hero">Home</NavItems>
-						<NavItems href="#about">About us</NavItems>
-						<NavItems href="#products">Products</NavItems>
-						<NavItems href="#targeting">Industries Served</NavItems>
-						<NavItems href="#contact">Contact us</NavItems>
-					</NavList>
-				</span>
-			</header>
 			<main className="grow-1 w-full relative">
 				{/* Hero */}
 				<section
@@ -297,12 +246,3 @@ export default function App() {
 		</div>
 	);
 }
-
-const hamburgerHandler = () => {
-	const hamburger = document.querySelector("#hamburger") as HTMLElement;
-	if (hamburger.style.display === "") {
-		hamburger.style.display = "flex";
-	} else {
-		hamburger.style.display = "";
-	}
-};

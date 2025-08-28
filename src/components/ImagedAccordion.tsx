@@ -1,3 +1,4 @@
+"use client";
 import { ArrowUp } from "lucide-react";
 
 export function ImagedAccordion({
@@ -47,7 +48,7 @@ export function ImagedAccordion({
 					</button>
 				</h2>
 				<p
-					className="absolute font-light opacity-0 delay-0 group-hover:delay-500 group-hover:opacity-100 text-center px-4 text-shadow-2xs text-shadow-background"
+					className="absolute font-medium opacity-0 delay-0 group-hover:delay-500 group-hover:opacity-100 text-center px-4 text-shadow-2xs text-shadow-background"
 					id="description"
 				>
 					{description}
