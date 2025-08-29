@@ -5,30 +5,6 @@ import { ProductCard } from "@/components/ProductCard";
 import { ImagedAccordion } from "@/components/ImagedAccordion";
 
 export default function Home() {
-	const targeting = [
-		{
-			id: "construction",
-			imagePath: "Construction.png",
-			heading: "Construction",
-			description:
-				"Shyama Industries manufactures durable braided and twisted ropes along with reliable safety equipment for the construction sector. Designed to handle heavy loads and tough conditions, our products ensure strength, safety, and efficiency at worksites. We are committed to supporting builders with trusted solutions that enhance performance and reliability",
-		},
-		{
-			id: "military",
-			imagePath: "Military.png",
-			heading: "Military",
-			description:
-				"Shyama Industries is a trusted manufacturer of braided and twisted ropes engineered for military applications. With a focus on strength, safety, and reliability, our ropes withstand extreme conditions in training and combat. We provide defense forces with dependable solutions for climbing, securing equipment, and mission-critical operations.",
-		},
-		{
-			id: "mountain_climbing",
-			imagePath: "Mountain_Climbing.png",
-			heading: "Mountain Climbing",
-			description:
-				"Shyama Industries specializes in braided and twisted ropes and advanced safety equipment designed also for the Mountain Climbing. Our products combine strength, durability, and precision to ensure maximum safety in challenging environments. Trusted by climbers and adventure professionals, we deliver reliable gear that supports every ascent with confidence.",
-		},
-	];
-
 	const products = [
 		{
 			imagePath: `Braided_Rope.png`,
@@ -86,8 +62,31 @@ export default function Home() {
 		// { imagePath: "", heading: "", description: "" },
 	];
 
+	const targeting = [
+		{
+			id: "construction",
+			imagePath: "Construction.png",
+			heading: "Construction",
+			description:
+				"Shyama Industries manufactures durable braided and twisted ropes along with reliable safety equipment for the construction sector. Designed to handle heavy loads and tough conditions, our products ensure strength, safety, and efficiency at worksites. We are committed to supporting builders with trusted solutions that enhance performance and reliability",
+		},
+		{
+			id: "military",
+			imagePath: "Military.png",
+			heading: "Military",
+			description:
+				"Shyama Industries is a trusted manufacturer of braided and twisted ropes engineered for military applications. With a focus on strength, safety, and reliability, our ropes withstand extreme conditions in training and combat. We provide defense forces with dependable solutions for climbing, securing equipment, and mission-critical operations.",
+		},
+		{
+			id: "mountain_climbing",
+			imagePath: "Mountain_Climbing.png",
+			heading: "Mountain Climbing",
+			description:
+				"Shyama Industries specializes in braided and twisted ropes and advanced safety equipment designed also for the Mountain Climbing. Our products combine strength, durability, and precision to ensure maximum safety in challenging environments. Trusted by climbers and adventure professionals, we deliver reliable gear that supports every ascent with confidence.",
+		},
+	];
 	const contact = {
-		email: "shyamaindustries573@gmail.com",
+		email: "connect@shyamaindustries.org",
 		phone: "+91 9910316881",
 		address:
 			"12/10 Sunrise Industrial Area, Loni Rd, near Mohan Nagar, Sahibabad, Ghaziabad, UP 201007, INDIA",
