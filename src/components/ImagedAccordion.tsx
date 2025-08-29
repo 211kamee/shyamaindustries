@@ -20,7 +20,7 @@ export function ImagedAccordion({
 				className="absolute w-full bg-background min-h-0 group-hover:min-h-full delay-500 group-hover:delay-0"
 				id={id}
 			>
-				<h2 className="p-4 not-md:py-2 font-bold md:text-xl text-shadow-2xs text-shadow-foreground flex justify-center">
+				<h2 className="p-4 not-md:py-2 font-bold md:text-xl flex justify-center">
 					<span className="text-center grow">{heading}</span>
 					<button
 						className="group-hover:rotate-180 "

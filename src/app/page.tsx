@@ -87,10 +87,11 @@ export default function Home() {
 	];
 
 	const contact = {
-		email: "shyamaindustries573 @gmail.com",
+		email: "shyamaindustries573@gmail.com",
 		phone: "+91 9910316881",
-		address: "113, Vrindavan Garden, Sahibabad, Ghaziabad, UP 201005, INDIA",
-		map: "https://maps.app.goo.gl/Luq4UqtYEH4m1st99?g_st=aw",
+		address:
+			"12/10 Sunrise Industrial Area, Loni Rd, near Mohan Nagar, Sahibabad, Ghaziabad, UP 201007, INDIA",
+		map: "https://maps.app.goo.gl/P6V4LBVn9o4L1Cgi7",
 	};
 
 	return (
@@ -128,12 +129,12 @@ export default function Home() {
 				{/* About us */}
 				<section
 					id="about"
-					className="flex flex-col justify-center items-center w-full gap-4"
+					className="flex flex-col justify-center items-center w-full gap-4 bg-background"
 				>
-					<h2 className="text-4xl font-medium w-full border-b border-destructive text-center py-6 font-dsc">
+					<h2 className="text-4xl font-medium w-full border-t border-destructive text-center py-6 font-dsc">
 						About us
 					</h2>
-					<div className="max-w-6xl grid lg:grid-cols-2  items-center gap-16 p-4">
+					<div className="max-w-6xl grid lg:grid-cols-2  items-center gap-16 p-4 border-t">
 						<div className="order-1 bg-accent">
 							<img
 								src="About.png"
@@ -179,7 +180,7 @@ export default function Home() {
 					className="flex flex-col justify-center items-center w-full gap-4 bg-accent"
 					id="products"
 				>
-					<h2 className="text-4xl font-medium w-full border-b border-destructive text-center py-6 font-dsc">
+					<h2 className="text-4xl font-medium w-full border-t border-destructive text-center py-6 font-dsc">
 						Products
 					</h2>
 					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl m-4">
@@ -199,7 +200,7 @@ export default function Home() {
 					className="flex flex-col justify-center items-center w-full gap-4 bg-accent"
 					id="targeting"
 				>
-					<h2 className="text-4xl font-medium w-full border-b border-destructive text-center py-6 font-dsc">
+					<h2 className="text-4xl font-medium w-full border-t border-destructive text-center py-6 font-dsc">
 						Industries Served
 					</h2>
 					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl m-4">
@@ -217,7 +218,7 @@ export default function Home() {
 				<hr />
 				{/* Contact Us */}
 				<section
-					className="flex justify-center items-center bg-accent"
+					className="flex justify-center items-center border-t border-destructive bg-accent"
 					id="contact"
 				>
 					<div className="w-full p-12 flex gap-6 justify-center not-md:flex-col">
@@ -265,18 +266,22 @@ export default function Home() {
 				{/* Maybe Testimonials Section */}
 			</main>
 			<hr />
-			<footer className="w-full">
-				<span className="flex w-full not-md:flex-col justify-center border-b border-destructive bg-accent md:px-[22vw] p-4">
-					<section className="w-4/10 flex flex-col justify-around">
-						<span>
+			<footer className="w-full bg-accent text-center text-muted-foreground">
+				<section className="flex w-full flex-col-reverse md:flex-row-reverse justify-center border-t border-destructive md:px-[22vw]">
+					<div className="md:w-4/10 w-full flex flex-col justify-around">
+						<span className="p-2">
 							Shyama Industries, saving lives by manufacturing and supplying
 							high quality safety equipment and solutions.
 						</span>
 						<hr />
-						<span>2025 All rights reserved</span>
-					</section>
-					<section className="w-1/4 flex flex-col items-center">
-						<h2 className="text-xl font-medium w-full underline underline-offset-4 decoration-destructive md:text-center font-dsc">
+						<span className="p-2">
+							&copy; Shyama Industries, {new Date().getFullYear()} All rights
+							reserved
+						</span>
+					</div>
+					<hr />
+					<div className="md:w-1/4 flex flex-col items-center p-2">
+						<h2 className="text-lg font-medium w-full underline underline-offset-4 decoration-destructive font-dsc">
 							Quick Links
 						</h2>
 						<a href="#hero">Go to top</a>
@@ -284,9 +289,15 @@ export default function Home() {
 						<a href="#products">Products</a>
 						<a href="#targeting">Industries Served</a>
 						<a href="#contact">Contact us</a>
-					</section>
-				</span>
-				<section className="text-center">Made with Love</section>
+					</div>
+				</section>
+				<hr />
+				<section className="p-2">
+					Made with care by
+					<a href="https://vishalmaurya07.netlify.app/" target="_blank">
+						<strong> Vishal Maurya</strong>
+					</a>
+				</section>
 			</footer>
 		</div>
 	);
