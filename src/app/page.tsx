@@ -293,9 +293,10 @@ export default function Home() {
 				<hr />
 				<section className="p-2">
 					Made with care by
-					<a href="https://vishalmaurya07.netlify.app/" target="_blank">
+					<strong> Arpit Kumar</strong>
+					{/* <a href="https://vishalmaurya07.netlify.app/" target="_blank">
 						<strong> Vishal Maurya</strong>
-					</a>
+					</a> */}
 				</section>
 			</footer>
 		</div>
