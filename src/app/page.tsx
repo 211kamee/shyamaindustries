@@ -130,7 +130,7 @@ export default function Home() {
 					id="about"
 					className="flex flex-col justify-center items-center w-full gap-4"
 				>
-					<h2 className="text-4xl font-medium w-full border-b border-destructive md:text-center py-6 font-dsc">
+					<h2 className="text-4xl font-medium w-full border-b border-destructive text-center py-6 font-dsc">
 						About us
 					</h2>
 					<div className="max-w-6xl grid lg:grid-cols-2  items-center gap-16 p-4">
@@ -159,7 +159,7 @@ export default function Home() {
 							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 								<div className="space-y-2">
 									<h3 className="text-xl font-semibold">Quality Assured</h3>
-									<p className="text-muted-foreground">bg-accent w-full md:px-[22vw] p-4
+									<p className="text-muted-foreground">
 										All products meet international safety standards
 									</p>
 								</div>
@@ -179,7 +179,7 @@ export default function Home() {
 					className="flex flex-col justify-center items-center w-full gap-4 bg-accent"
 					id="products"
 				>
-					<h2 className="text-4xl font-medium w-full border-b border-destructive md:text-center py-6 font-dsc">
+					<h2 className="text-4xl font-medium w-full border-b border-destructive text-center py-6 font-dsc">
 						Products
 					</h2>
 					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl m-4">
@@ -199,7 +199,7 @@ export default function Home() {
 					className="flex flex-col justify-center items-center w-full gap-4 bg-accent"
 					id="targeting"
 				>
-					<h2 className="text-4xl font-medium w-full border-b border-destructive md:text-center py-6 font-dsc">
+					<h2 className="text-4xl font-medium w-full border-b border-destructive text-center py-6 font-dsc">
 						Industries Served
 					</h2>
 					<div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl m-4">
