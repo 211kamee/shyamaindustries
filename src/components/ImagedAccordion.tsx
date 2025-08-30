@@ -50,7 +50,7 @@ export function ImagedAccordion({
 					</button>
 				</h2>
 				<p
-					className="absolute font-dsc font-normal text-[90%] opacity-0 delay-0 group-hover:delay-500 group-hover:opacity-100 text-center p-2 text-shadow-2xs text-shadow-background flex justify-center border-t border-destructive overflow-y-auto max-h-8/9"
+					className="absolute font-dsc font-normal text-[90%] opacity-0 delay-0 group-hover:delay-500 group-hover:opacity-100 text-center p-2 text-shadow-2xs text-shadow-background flex justify-center border-t border-destructive overflow-y-auto max-h-8/10"
 					id="description"
 				>
 					{description}
