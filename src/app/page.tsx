@@ -98,15 +98,15 @@ export default function Home() {
 			<main className="grow-1 w-full relative">
 				{/* Hero */}
 				<section
-					className="flex flex-col justify-center items-center relative gap-4 not-md:my-8 p-16 md:flex-row-reverse min-h-[30rem]"
+					className="flex flex-col justify-center items-center relative gap-4 not-xl:my-8 p-16 xl:flex-row-reverse min-h-[30rem]"
 					id="hero"
 				>
-					<div className="bg-[url('/hero.jpg')] bg-center bg-cover bg-no-repeat w-full md:w-[40rem] h-[30rem] absolute z-[-10] not-md:opacity-50 md:static" />
+					<div className="bg-[url('/hero.jpg')] bg-center bg-cover bg-no-repeat w-full xl:w-[40rem] h-[30rem] absolute z-[-10] not-xl:opacity-50 xl:static" />
 
-					<span className="flex flex-col justify-between gap-6 font-medium md:w-[30rem] md:h-[28rem] px-4 text-shadow-lg text-shadow-background">
-						<h2 className="md:text-7xl text-5xl font-medium">
+					<span className="flex flex-col justify-between gap-6 font-medium xl:w-[30rem] xl:h-[28rem] px-4 text-shadow-lg text-shadow-background">
+						<h2 className="xl:text-7xl text-5xl font-medium">
 							Saving thousands of{" "}
-							<span className="underline decoration-destructive md:decoration-[8px] decoration-[6px]">
+							<span className="underline decoration-destructive xl:decoration-[8px] decoration-[6px]">
 								lives
 							</span>{" "}
 							daily
@@ -220,40 +220,40 @@ export default function Home() {
 					className="flex justify-center items-center border-t border-destructive bg-accent"
 					id="contact"
 				>
-					<div className="w-full p-12 flex gap-6 justify-center not-md:flex-col">
+					<div className="w-full p-12 flex gap-6 justify-center not-xl:flex-col">
 						<img
 							src="hello.svg"
-							className="max-h-96 md:w-1/2 object-contain object-right "
+							className="max-h-96 xl:w-1/2 object-contain xl:object-right "
 						/>
-						<div className="md:w-1/2 flex flex-col justify-center md:p-4 gap-8">
+						<div className="xl:w-1/2 flex flex-col justify-center not-xl:items-center xl:p-4 gap-8">
 							<h2 className="text-3xl font-bold font-dsc">Contact us</h2>
-							<p className="">
+							<p className="not-xl:text-center">
 								Interest in our products? <br /> Feel free to reach us for
 								ordering our products, and any sales related inquiry.
 							</p>
 							<span>We look forward to hearing from you!</span>
 							<a
 								href={`${contact.map}`}
-								className="flex flex-col items-center md:block not-md:text-center"
+								className="flex flex-col items-center xl:block not-xl:text-center"
 							>
 								<MapPin className="inline mx-2" />
 								<span className="">{contact.address}</span>
 							</a>
 							<a
 								href={`mailto:${contact.email}`}
-								className="flex flex-col items-center md:block not-md:text-center"
+								className="flex flex-col items-center xl:block not-xl:text-center"
 							>
 								<Mail className="inline mx-2" />
 								<span>{contact.email}</span>
 							</a>
 							<a
 								href={`tel:${contact.phone}`}
-								className="flex flex-col items-center md:block not-md:text-center relative"
+								className="flex flex-col items-center xl:block not-xl:text-center relative"
 							>
 								<img
 									src="callUs.svg"
 									alt=""
-									className="absolute left-3/6 md:left-1/6 top-full"
+									className="absolute left-3/6 xl:left-1/6 top-full"
 								/>
 								<Phone className="inline mx-2" />
 								<span>{contact.phone}</span>
@@ -266,8 +266,8 @@ export default function Home() {
 			</main>
 			<hr />
 			<footer className="w-full bg-accent text-center text-muted-foreground">
-				<section className="flex w-full flex-col-reverse md:flex-row-reverse justify-center border-t border-destructive md:px-[22vw]">
-					<div className="md:w-4/10 w-full flex flex-col justify-around">
+				<section className="flex w-full flex-col-reverse xl:flex-row-reverse justify-center border-t border-destructive xl:px-[22vw]">
+					<div className="xl:w-4/10 w-full flex flex-col justify-around">
 						<span className="p-2">
 							Shyama Industries, saving lives by manufacturing and supplying
 							high quality safety equipment and solutions.
@@ -279,7 +279,7 @@ export default function Home() {
 						</span>
 					</div>
 					<hr />
-					<div className="md:w-1/4 flex flex-col items-center p-2">
+					<div className="xl:w-1/4 flex flex-col items-center p-2">
 						<h2 className="text-lg font-medium w-full underline underline-offset-4 decoration-destructive font-dsc">
 							Quick Links
 						</h2>

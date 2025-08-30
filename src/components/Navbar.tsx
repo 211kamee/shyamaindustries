@@ -4,11 +4,11 @@ import { AlignJustify } from "lucide-react";
 
 export default function Navbar() {
 	return (
-		<header className="w-full px-4 h-14 md:h-18 sticky flex justify-between items-center break-all font-medium text-lg top-0 md:px-[22vw] z-10 shadow  bg-accent">
+		<header className="w-full px-4 h-14 xl:h-18 sticky flex justify-between items-center break-all font-medium text-lg top-0 xl:px-[22vw] z-10 shadow  bg-accent">
 			<a href="/" className="h-full">
 				<img src="/logo.png" alt="Logo" className="h-full scale-120 p-2" />
 			</a>
-			<NavList className="hidden max-w-max md:flex">
+			<NavList className="hidden max-w-max xl:flex">
 				<NavItems href="#hero">Home</NavItems>
 				<NavItems href="#about">About us</NavItems>
 				<NavItems href="#products">Products</NavItems>
@@ -16,7 +16,7 @@ export default function Navbar() {
 				<NavItems href="#contact">Contact us</NavItems>
 			</NavList>
 			<span
-				className="cursor-pointer md:hidden"
+				className="cursor-pointer xl:hidden"
 				onClick={function () {
 					const hamburger = document.querySelector("#hamburger") as HTMLElement;
 					if (hamburger.style.display === "") {
@@ -46,7 +46,7 @@ export function NavList({ className, ...props }: React.ComponentProps<"ul">) {
 	return (
 		<ul
 			className={cn(
-				"group flex flex-wrap list-none items-center md:justify-end gap-2",
+				"group flex flex-wrap list-none items-center xl:justify-end gap-2",
 				className
 			)}
 			{...props}
