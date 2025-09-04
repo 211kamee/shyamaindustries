@@ -8,7 +8,7 @@ export function ProductCard({
 }) {
 	return (
 		<Card
-			className={`relative hover:shadow-2xl duration-500 transition-all flex flex-col xl:flex-row-reverse items-center border border-destructive xl:aspect-[3/2] xl:w-[550px] w-full p-6 `}
+			className={`relative hover:shadow-2xl duration-500 transition-all flex flex-col sm:flex-row-reverse items-center border border-destructive sm:aspect-[3/2] sm:w-[550px] w-full p-6 `}
 		>
 			<img
 				src={imagePath}
@@ -16,10 +16,10 @@ export function ProductCard({
 				loading="lazy"
 			/>
 			<CardContent
-				className={`p-[1rem] flex flex-col justify-evenly h-full xl:w-[60%]`}
+				className={`p-[1rem] flex flex-col justify-evenly h-full sm:w-[60%]`}
 			>
 				<h1
-					className={`font-medium leading-[90%] text-2xl xl:text-3xl my-1 font-dsc`}
+					className={`font-medium leading-[90%] text-2xl sm:text-3xl my-1 font-dsc`}
 				>
 					{heading}
 				</h1>
@@ -32,7 +32,7 @@ export function ProductCard({
 
 				<Button
 					variant={"destructive"}
-					className={`w-fit h-fit text-[0.8rem] not-xl:w-full my-2 font-bold rounded-[50px]`}
+					className={`w-fit h-fit text-[0.8rem] not-sm:w-full my-2 font-bold rounded-[50px]`}
 					asChild
 				>
 					<a href="/#contact">GET IT NOW !</a>

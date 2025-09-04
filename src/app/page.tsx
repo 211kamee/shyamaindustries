@@ -267,16 +267,11 @@ export default function Home() {
 			</main>
 			<hr />
 			<footer className="w-full bg-accent text-center text-muted-foreground">
-				<section className="flex w-full flex-col-reverse xl:flex-row-reverse justify-center border-t border-destructive xl:px-[22vw]">
+				<section className="flex w-full flex-col-reverse xl:flex-row-reverse justify-around border-t border-destructive xl:px-[22vw]">
 					<div className="xl:w-4/10 w-full flex flex-col justify-around">
 						<span className="p-2">
 							Shyama Industries, saving lives by manufacturing and supplying
 							high quality safety equipment and solutions.
-						</span>
-						<hr />
-						<span className="p-2">
-							&copy; Shyama Industries, {new Date().getFullYear()} All rights
-							reserved
 						</span>
 					</div>
 					<hr />
@@ -292,9 +287,15 @@ export default function Home() {
 					</div>
 				</section>
 				<hr />
+				<span className="p-2">
+					&copy; Shyama Industries, {new Date().getFullYear()} All rights
+					reserved
+				</span>
 				<section className="p-2">
 					Made with care by
-					<strong> Arpit Kumar</strong>
+					<a href="https://github.com/211kamee/" target="_blank">
+						<strong> Arpit Kumar</strong>
+					</a>
 					{/* <a href="https://vishalmaurya07.netlify.app/" target="_blank">
 						<strong> Vishal Maurya</strong>
 					</a> */}
