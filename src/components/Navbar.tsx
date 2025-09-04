@@ -4,9 +4,9 @@ import { AlignJustify } from "lucide-react";
 
 export default function Navbar() {
 	return (
-		<header className="w-full px-4 h-14 xl:h-18 sticky flex justify-between items-center break-all font-medium text-lg top-0 xl:px-[22vw] z-10 shadow  bg-accent">
+		<header className="w-full py-2 px-4 not-xl:h-14 sticky flex justify-between items-center break-all font-medium text-lg top-0 xl:p-4 xl:px-8 z-10 shadow  bg-accent">
 			<a href="/" className="h-full">
-				<img src="/logo.png" alt="Logo" className="h-full scale-120 p-2" />
+				<img src="/logo.png" alt="Logo" className="xl:h-14 not-xl:h-10 xl:scale-150" />
 			</a>
 			<NavList className="hidden max-w-max xl:flex">
 				<NavItems href="#hero">Home</NavItems>
@@ -28,7 +28,7 @@ export default function Navbar() {
 			>
 				<AlignJustify className="h-full"></AlignJustify>
 				<NavList
-					className="hidden flex-col absolute w-full h-[calc(100svh-3.4rem)] top-[100%] right-0 bg-background"
+					className="hidden flex-col absolute w-full h-[calc(100svh-3.4rem)] top-[100%] right-0 bg-background p-4 gap-4"
 					id="hamburger"
 				>
 					<NavItems href="#hero">Home</NavItems>

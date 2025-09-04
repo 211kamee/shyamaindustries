@@ -85,6 +85,7 @@ export default function Home() {
 				"Shyama Industries specializes in braided and twisted ropes and advanced safety equipment designed also for the Mountain Climbing. Our products combine strength, durability, and precision to ensure maximum safety in challenging environments. Trusted by climbers and adventure professionals, we deliver reliable gear that supports every ascent with confidence.",
 		},
 	];
+
 	const contact = {
 		email: "connect@shyamaindustries.org",
 		phone: "+91 9910316881",
@@ -98,10 +99,10 @@ export default function Home() {
 			<main className="grow-1 w-full relative">
 				{/* Hero */}
 				<section
-					className="flex flex-col justify-center items-center relative gap-4 not-xl:my-8 p-16 xl:flex-row-reverse min-h-[30rem]"
+					className="flex flex-col justify-center items-center relative gap-4 p-16 xl:flex-row-reverse min-h-[30rem]"
 					id="hero"
 				>
-					<div className="bg-[url('/hero.jpg')] bg-center bg-cover bg-no-repeat w-full xl:w-[40rem] h-[30rem] absolute z-[-10] not-xl:opacity-50 xl:static" />
+					<div className="bg-[url('/hero.jpg')] bg-center bg-cover bg-no-repeat w-full xl:w-[40rem] h-[30rem] not-xl:h-full absolute z-[-10] not-xl:opacity-50 xl:static" />
 
 					<span className="flex flex-col justify-between gap-6 font-medium xl:w-[30rem] xl:h-[28rem] px-4 text-shadow-lg text-shadow-background">
 						<h2 className="xl:text-7xl text-5xl font-medium">
