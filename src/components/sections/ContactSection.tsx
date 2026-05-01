@@ -21,37 +21,37 @@ export function ContactSection() {
 					<span>We look forward to hearing from you!</span>
 					<a
 						href={`${CONTACT_INFO.map}`}
-						className="flex flex-col items-center xl:block not-xl:text-center"
+						className="flex items-start gap-2 not-xl:flex-col not-xl:items-center not-xl:text-center"
 					>
-						<MapPin className="inline mx-2" />
-						<span className="">{CONTACT_INFO.address}</span>
+						<MapPin className="shrink-0 mt-1" />
+						<span>{CONTACT_INFO.address}</span>
 					</a>
 					<a
 						href={`mailto:${CONTACT_INFO.email}`}
-						className="flex flex-col items-center xl:block not-xl:text-center"
+						className="flex items-start gap-2 not-xl:flex-col not-xl:items-center not-xl:text-center"
 					>
-						<Mail className="inline mx-2" />
+						<Mail className="shrink-0 mt-1" />
 						<span>{CONTACT_INFO.email}</span>
 					</a>
 					<a
 						href={`${CONTACT_INFO.instagram}`}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex flex-col items-center xl:block not-xl:text-center"
+						className="flex items-start gap-2 not-xl:flex-col not-xl:items-center not-xl:text-center"
 					>
-						<Instagram className="inline mx-2" />
+						<Instagram className="shrink-0 mt-1" />
 						<span>{"@shyama_industries"}</span>
 					</a>
 					<a
 						href={`tel:${CONTACT_INFO.phone}`}
-						className="flex flex-col items-center xl:block not-xl:text-center relative"
+						className="flex items-start gap-2 not-xl:flex-col not-xl:items-center not-xl:text-center relative"
 					>
 						<img
 							src="icons/callUs.svg"
 							alt=""
 							className="absolute left-3/6 xl:left-1/6 top-full"
 						/>
-						<Phone className="inline mx-2" />
+						<Phone className="shrink-0 mt-1" />
 						<span>{CONTACT_INFO.phone}</span>
 					</a>
 				</div>
