@@ -1,11 +1,14 @@
 import { Button } from "./ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import type { Product } from "@/data/siteContent";
+
+type ProductCardProps = Product;
 
 export function ProductCard({
 	imagePath = "#",
 	heading = "...",
 	description = "...",
-}) {
+}: ProductCardProps) {
 	return (
 		<Card
 			className={`relative hover:shadow-2xl duration-500 transition-all flex flex-col sm:flex-row-reverse items-center border border-destructive sm:aspect-[3/2] sm:w-[550px] w-full p-6 `}

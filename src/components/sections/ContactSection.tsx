@@ -1,0 +1,61 @@
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { CONTACT_INFO } from "@/data/siteContent";
+
+export function ContactSection() {
+	return (
+		<section
+			className="flex justify-center items-center border-t border-destructive bg-accent"
+			id="contact"
+		>
+			<div className="w-full p-12 flex gap-6 justify-center not-xl:flex-col">
+				<img
+					src="icons/hello.svg"
+					className="max-h-96 xl:w-1/2 object-contain xl:object-right "
+				/>
+				<div className="xl:w-1/2 flex flex-col justify-center not-xl:items-center xl:p-4 gap-8">
+					<h2 className="text-3xl font-bold font-dsc">Contact us</h2>
+					<p className="not-xl:text-center">
+						Interest in our products? <br /> Feel free to reach us for
+						ordering our products, and any sales related inquiry.
+					</p>
+					<span>We look forward to hearing from you!</span>
+					<a
+						href={`${CONTACT_INFO.map}`}
+						className="flex flex-col items-center xl:block not-xl:text-center"
+					>
+						<MapPin className="inline mx-2" />
+						<span className="">{CONTACT_INFO.address}</span>
+					</a>
+					<a
+						href={`mailto:${CONTACT_INFO.email}`}
+						className="flex flex-col items-center xl:block not-xl:text-center"
+					>
+						<Mail className="inline mx-2" />
+						<span>{CONTACT_INFO.email}</span>
+					</a>
+					<a
+						href={`${CONTACT_INFO.instagram}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex flex-col items-center xl:block not-xl:text-center"
+					>
+						<Instagram className="inline mx-2" />
+						<span>{"@shyama_industries"}</span>
+					</a>
+					<a
+						href={`tel:${CONTACT_INFO.phone}`}
+						className="flex flex-col items-center xl:block not-xl:text-center relative"
+					>
+						<img
+							src="icons/callUs.svg"
+							alt=""
+							className="absolute left-3/6 xl:left-1/6 top-full"
+						/>
+						<Phone className="inline mx-2" />
+						<span>{CONTACT_INFO.phone}</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	);
+}

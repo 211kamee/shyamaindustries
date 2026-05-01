@@ -1,12 +1,15 @@
 "use client";
 import { ArrowUp } from "lucide-react";
+import type { Industry } from "@/data/siteContent";
+
+type ImagedAccordionProps = Industry;
 
 export function ImagedAccordion({
 	imagePath = "#",
 	heading = "#",
 	description = "...",
 	id = "image_accordian",
-}) {
+}: ImagedAccordionProps) {
 	return (
 		<span
 			className={`group relative flex flex-col-reverse h-[40svh] **:duration-500 overflow-hidden hover:shadow-2xl transition-all duration-500 rounded-xl border border-destructive`}

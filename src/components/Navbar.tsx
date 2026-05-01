@@ -1,6 +1,8 @@
 "use client";
-import { cn } from "@/lib/utils";
 import { AlignJustify } from "lucide-react";
+import { NavList } from "@/components/NavList";
+import { NavItem } from "@/components/NavItem";
+import { NAV_LINKS } from "@/data/navLinks";
 
 export default function Navbar() {
 	return (
@@ -13,11 +15,11 @@ export default function Navbar() {
 				/>
 			</a>
 			<NavList className="hidden max-w-max xl:flex">
-				<NavItems href="#hero">Home</NavItems>
-				<NavItems href="#about">About us</NavItems>
-				<NavItems href="#products">Products</NavItems>
-				<NavItems href="#targeting">Industries Served</NavItems>
-				<NavItems href="#contact">Contact us</NavItems>
+				{NAV_LINKS.map((link) => (
+					<NavItem key={link.href} href={link.href}>
+						{link.label}
+					</NavItem>
+				))}
 			</NavList>
 			<span
 				className="cursor-pointer xl:hidden"
@@ -35,39 +37,13 @@ export default function Navbar() {
 					className="hidden flex-col absolute w-full h-[calc(100svh-3.4rem)] top-[100%] right-0 bg-background p-4 gap-4"
 					id="hamburger"
 				>
-					<NavItems href="#hero">Home</NavItems>
-					<NavItems href="#about">About us</NavItems>
-					<NavItems href="#products">Products</NavItems>
-					<NavItems href="#targeting">Industries Served</NavItems>
-					<NavItems href="#contact">Contact us</NavItems>
+					{NAV_LINKS.map((link) => (
+						<NavItem key={link.href} href={link.href}>
+							{link.label}
+						</NavItem>
+					))}
 				</NavList>
 			</span>
 		</header>
-	);
-}
-
-export function NavList({ className, ...props }: React.ComponentProps<"ul">) {
-	return (
-		<ul
-			className={cn(
-				"group flex flex-wrap list-none items-center xl:justify-end gap-2",
-				className
-			)}
-			{...props}
-		/>
-	);
-}
-
-export function NavItems({ className, ...props }: React.ComponentProps<"a">) {
-	return (
-		<li>
-			<a
-				className={cn(
-					"relative p-1 m-1 before:content-[''] before:h-1/16 before:w-0 before:bg-foreground before:absolute before:top-0 before:left-0 after:content-[''] after:h-1/16 after:w-0 after:bg-foreground after:absolute after:bottom-0 after:right-0 hover:before:w-full hover:after:w-full before:transition-all after:transition-all",
-					className
-				)}
-				{...props}
-			></a>
-		</li>
 	);
 }
