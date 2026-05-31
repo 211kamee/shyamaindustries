@@ -17,7 +17,7 @@ export interface ContactInfo {
   email: string;
   instagram: string;
   facebook: string;
-  phone: string;
+  phone: string[];
   address: string;
   map: string;
 }
@@ -113,7 +113,7 @@ export const CONTACT_INFO: ContactInfo = {
   email: "connect@shyamaindustries.org",
   instagram: "https://www.instagram.com/shyama_industries",
   facebook: "https://www.facebook.com/people/Shyama-Industries/61588861211758/",
-  phone: "+91 9910316881",
+  phone: ["+91 9910316881" ,"+91 9311779635"],
   address:
     "12/10 Sunrise Industrial Area, Loni Rd, near Mohan Nagar, Sahibabad, Ghaziabad, UP 201007, INDIA",
   map: "https://maps.app.goo.gl/P6V4LBVn9o4L1Cgi7",

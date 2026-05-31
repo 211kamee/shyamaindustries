@@ -51,18 +51,21 @@ export function ContactSection() {
             <FacebookIcon className="shrink-0 mt-1" />
             <span>{"Shyama Industries"}</span>
           </a>
-          <a
-            href={`tel:${CONTACT_INFO.phone}`}
-            className="flex items-start gap-2 not-xl:flex-col not-xl:items-center not-xl:text-center relative"
-          >
-            <img
-              src="icons/callUs.svg"
-              alt=""
-              className="absolute left-3/6 xl:left-1/6 top-full"
-            />
-            <Phone className="shrink-0 mt-1" />
-            <span>{CONTACT_INFO.phone}</span>
-          </a>
+          {
+            (CONTACT_INFO.phone).map((e) => <a
+              href={`tel:${e}`}
+              className="flex items-start gap-2 not-xl:flex-col not-xl:items-center not-xl:text-center relative"
+            >
+              <img
+                src="icons/callUs.svg"
+                alt=""
+                className="absolute left-3/6 xl:left-1/6 top-full"
+              />
+              <Phone className="shrink-0 mt-1" />
+              <span>{e}</span>
+            </a>)
+          }
+
         </div>
       </div>
     </section>
